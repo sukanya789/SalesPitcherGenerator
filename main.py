@@ -31,6 +31,7 @@ async def generate_sales_pitch_and_email_endpoint(request: Request):
     try:
         data = await request.form()
         url = data.get("url")
+        api_key = data.get("api_key")
     except Exception as e:
         logging.error(f"Error parsing request body: {e}")
         return JSONResponse(content={"error": "Invalid request body"}, status_code=400)
@@ -38,7 +39,7 @@ async def generate_sales_pitch_and_email_endpoint(request: Request):
     if not url:
         return JSONResponse(content={"error": "URL not provided"}, status_code=400)
 
-    sales_pitch, email_content = generate_sales_pitch_and_email(url)
+    sales_pitch, email_content = generate_sales_pitch_and_email(url, api_key)
     logging.debug(f"Generated sales pitch: {sales_pitch}")
     logging.debug(f"Generated email content: {email_content}")
 
