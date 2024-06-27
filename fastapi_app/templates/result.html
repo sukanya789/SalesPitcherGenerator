@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lead Generation - Sales Pitch and Email Content Output</title>
+</head>
+<body>
+    <h1>Lead Generation - Sales Pitch and Email Content Output</h1>
+    <div id="output">
+        {% if sales_pitch_and_email %}
+            <p>Sales Pitch and Email Content:</p>
+            <pre>{{ sales_pitch_and_email }}</pre>
+        {% else %}
+            <p>No output generated.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

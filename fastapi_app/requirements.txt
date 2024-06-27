@@ -1,0 +1,13 @@
+google-generativeai
+ fastapi
+ uvicorn
+ langchain-community
+ google-cloud-aiplatform
+ unstructured
+ langchain-community 
+ langchain
+ jinja2
+ spacy
+ streamlit
+ html5lib 
+ requests
